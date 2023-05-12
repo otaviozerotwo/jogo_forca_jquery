@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.imagens, .palavra, .chute{
+    margin-bottom: 30px;
+}
+
+.palavra{
+    display: flex;
+}
+.palavra span{
+    font-weight: 300;
+    font-size: 32px;
+    border-bottom: solid 3px black;
+    margin: 0 10px;
+    min-width: 25px;
+    text-align: center;
+    color: transparent;
+}
