@@ -7,24 +7,37 @@ $(document).ready(function(){
         'leopardo',
         'cavalo'
     ];
+    
+    var jogoIniciado = false;
+    var chances = 6;
+    var acertos = 0;
+    
+    var imagem = 0;
+    
+    var palavra = [];
+    var span = [];
 
-    var indiceAleatorio = Math.floor(Math.random() * palavras.length);
-    var palavraSorteada = palavras[indiceAleatorio];
+    $('#botao-sortear').click(function(){
+        jogoIniciado = true;
 
-    for(var i = 0; i < palavraSorteada.length; i++){
-        var letra = palavraSorteada[i];
-        var span = $("<span>" + letra + "</span>");
+        $('.palavra').empty();
 
-        $('.palavra').append(span);
-    }
+        palavra = palavras[Math.floor(Math.random() * palavras.length)];
+        console.log(palavra);
 
-    $('#botao-chutar').click(function(){
-        var letraDigitada = $('#chute-letra').val();
-
-        for(var i = 0; i < palavraSorteada.length; i++){
-            if(letraDigitada.toLowerCase() === palavraSorteada[i].toLowerCase()){
-                
-            }
+        for(var i = 0; i < palavra.length; i++){
+            span = $("<span>");
+            
+            $('.palavra').append(span);
         }
     });
+
+    // for(var i = 0; i < palavra.length; i++){
+    //     var letra = $('#input-letra').val();
+    //     if(letra === palavra[i]){
+    //         span = $("<span>");
+
+    //         $('.palavra').append(span);
+    //     }
+    // }
 });
