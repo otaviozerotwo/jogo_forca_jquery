@@ -18,10 +18,13 @@ $(document).ready(function(){
     
     var imagem = 1;
     var chances = 6;
+    
+    $('.chute').hide();
 
     $('#botao-sortear').click(function(){
         jogoIniciado = true;
 
+        $('.chute').show();
         $('.imagens').html('<img src="imgs/forca_1.png" width="300px" alt="Forca">');
         $('#input-letra').val("");
         $('.palavra').empty();
