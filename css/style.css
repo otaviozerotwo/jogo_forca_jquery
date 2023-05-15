@@ -12,13 +12,18 @@
     height: 100vh;
 }
 
-.imagens, .palavra, .chute{
+.imagens, .chute{
     margin-bottom: 30px;
+}
+
+.palavra{
+    margin-top: 30px;
 }
 
 .chute{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 #label, #input-letra, #botao-chutar, #botao-sortear{
@@ -31,16 +36,15 @@
     border-radius: 5px;
 }
 
-.palavra{
+.palavra, .palavra-visivel{
     display: flex;
 }
 
-.palavra span{
+.palavra span, .palavra-visivel span{
     font-weight: 300;
     font-size: 32px;
     border-bottom: solid 3px black;
     margin: 0 10px;
     min-width: 25px;
     text-align: center;
-    color: transparent;
 }
