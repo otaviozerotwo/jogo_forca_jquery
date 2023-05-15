@@ -64,6 +64,8 @@ $(document).ready(function(){
         
                 var span = $("<span>" + letra.toUpperCase() + "</span>");
                 $('.letras-digitadas').append(span);
+            }else{
+                repetiu = true;
             }
             
             console.log(aux);
@@ -71,8 +73,10 @@ $(document).ready(function(){
 
             if(repetiu === true){
                 console.log('Você já tentou essa letra');
+                repetiu = false;
             }else if(acertou === true){
                 console.log('Você acertou a letra: ' + letra);
+                acertou = false;
             }else{
                 chances--;
 
