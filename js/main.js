@@ -33,13 +33,15 @@ $(document).ready(function(){
         letrasDigitadas = [];
 
         palavra = palavras[Math.floor(Math.random() * palavras.length)];
-        console.log(palavra);
+        // console.log(palavra);
 
         for(var i = 0; i < palavra.length; i++){
             span = $("<span>");
             
             $('.palavra').append(span);
         }
+
+        $('.sortear-palavra').hide();
     });
 
     $('#botao-chutar').click(function(){
@@ -71,19 +73,19 @@ $(document).ready(function(){
                 repetiu = true;
             }
             
-            console.log(aux);
-            console.log(letrasDigitadas);
+            // console.log(aux);
+            // console.log(letrasDigitadas);
 
             if(repetiu === true){
-                console.log('Você já tentou essa letra');
+                // console.log('Você já tentou essa letra');
                 repetiu = false;
             }else if(acertou === true){
-                console.log('Você acertou a letra: ' + letra);
+                // console.log('Você acertou a letra: ' + letra);
                 acertou = false;
             }else{
                 chances--;
 
-                console.log('Você errou a letra. Chances: ' + chances);
+                // console.log('Você errou a letra. Chances: ' + chances);
 
                 imagem++;
                 var nome_imagem = '<img src="imgs/forca_' + imagem + '.png" width="300px" alt="Forca">';
